@@ -172,15 +172,6 @@ func parseRequestLine(data []byte) (*RequestLine, int, error) {
 	return parsedRequestLine, idx + 2, nil
 }
 
-//	func parseBody(data []byte) ([]byte, int) {
-//		idx := bytes.Index(data, []byte(crlf))
-//
-//		if idx == -1 {
-//			return nil, 0
-//		}
-//
-//		return data[:idx], idx + 2
-//	}
 func requestLineFromString(str string) (*RequestLine, error) {
 
 	requestLineParts := strings.Split(str, " ")
